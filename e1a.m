@@ -9,8 +9,8 @@
 #
 # uso: e1(A, w, t)
 # exemplo: plot(e1(1, 2, [0:0.1:(2*pi)]))
+
 function s = e1(A, w, t)
- 
-c = cos(w*t);
- 
-s = A * c;
+  c = cos(w*t);
+  s = A * c;
+endfunction
