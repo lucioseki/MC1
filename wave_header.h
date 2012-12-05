@@ -1,3 +1,5 @@
+#include <stdint.h>
+
 struct HeaderType{ /* cabecalho padrao de um arquivo WAVE */
 	int32_t ChunkID; /* cabecalho RIFF (Resource Interchange File Format) */
 	int32_t ChunkSize; /* tamanho do arquivo menos 8 */
@@ -13,6 +15,8 @@ struct HeaderType{ /* cabecalho padrao de um arquivo WAVE */
 	int32_t Subchunk2ID; /* contem as letras "data" (0x64617461 no formato big-endian) */
 	int32_t Subchunk2Size; /* numero de bytes para os dados */
 };
+
+typedef struct HeaderType HeaderType;
 /* O formato de arquivo WAVE e um subconjunto da especificacao RIFF da Microsoft
  * para o armazenamento de arquivos multimidia.
  */
