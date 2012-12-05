@@ -17,6 +17,7 @@ struct HeaderType{ /* cabecalho padrao de um arquivo WAVE */
 };
 
 typedef struct HeaderType HeaderType;
+void print_header(HeaderType*);
 /* O formato de arquivo WAVE e um subconjunto da especificacao RIFF da Microsoft
  * para o armazenamento de arquivos multimidia.
  */
