@@ -5,17 +5,17 @@ Lista1 de Multim&iacute;dia Computacional
 
 Resolu&ccedil;&atilde;o das quest&otilde;es para a primeira prova de Multim&iacute;ia Computacional
 
-* e1a
-* e1b
-* e1c
-* e2a
-* e2b
-* e2c
-* e2d
+* e1a OK
+* e1b OK
+* e1c OK
+* e2a OK
+* e2b OK
+* e2c OK
+* e2d OK
 - e3 
 - e4
 - e5
-* e6
+* e6 OK
 - e7
 - e8
 - e9
