@@ -21,4 +21,6 @@ int main(int argc, char** argv){
 	fread(&header, sizeof(HeaderType), 1, infile);
 	
 	print_header(&header);
+
+	return 0;
 }

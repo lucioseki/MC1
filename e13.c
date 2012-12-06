@@ -16,7 +16,7 @@ int main(int argc, char** argv){
 	FILE* outfile;
 	char filename[100];
 	uint16_t* data;
-	int numSamples;
+	int nSamples, bytesPerSample;
 	HeaderType header;
 
 	if(argc < 2){
@@ -32,8 +32,7 @@ int main(int argc, char** argv){
 	}
 
 	// arquivo de saida, com o dobro da freq. de amostragem
-	strcpy(filename, "cima");
-	strcat(filename, argv[1]);
+	sprintf(filename, "cima%s", argv[1]);
 	outfile = fopen(filename, "wb");
 	if(outfile == NULL){
 		perror(filename);
@@ -41,10 +40,11 @@ int main(int argc, char** argv){
 	}
 
 	fread(&header, sizeof(HeaderType), 1, infile);
-	numSamples = NumSamples(&header);
-	printf("Time:%d\n", Time(&header));
-	data = malloc(sizeof(uint16_t) * numSamples);
-	fread(data, sizeof(uint16_t), numSamples, infile);
+	nSamples = numSamples(&header);
+	bytesPerSample = header.BitsPerSample / 8;
+	data = malloc(bytesPerSample * nSamples);
+	fread(data, bytesPerSample, nSamples, infile);
+	printf("Duracao original: %d\n", duration(&header));
 
 	// aumentando freq. de amostragem
 	// o som fica mais agudo
@@ -54,16 +54,15 @@ int main(int argc, char** argv){
 	// a reproducao fica continua
 	// e a duracao cai pela metade
 	header.ByteRate *= 2; 
-	printf("Time:%d\n", Time(&header));
 	fwrite(&header, sizeof(HeaderType), 1, outfile);
-	fwrite(data, sizeof(uint16_t), numSamples, outfile);
+	fwrite(data, bytesPerSample, nSamples, outfile);
+	printf("Duracao alta freq.: %d\n", duration(&header));
 	fclose(outfile);
 
 	// arquivo de saida
 	// com metade da freq. de amostragem
 	// se nao corrigir o ByteRate, o player nao reproduz.
-	strcpy(filename, "baixo");
-	strcat(filename, argv[1]);
+	sprintf(filename, "baixo%s", argv[1]);
 	outfile = fopen(filename, "wb");
 	if(outfile == NULL){
 		perror(filename);
@@ -72,14 +71,18 @@ int main(int argc, char** argv){
 
 	rewind(infile);
 	fread(&header, sizeof(HeaderType), 1, infile);
+
 	header.SampleRate /= 2;
 	// se corrigir o ByteRate
 	// o som fica mais grave, e a duracao dobra
 	header.ByteRate /= 2;
-	printf("Time:%d\n", Time(&header));
 	fwrite(&header, sizeof(HeaderType), 1, outfile);
-	fwrite(data, sizeof(uint16_t), numSamples, outfile);
+	fwrite(data, bytesPerSample, nSamples, outfile);
+	printf("Duracao baixa freq.: %d\n", duration(&header));
+
 	free(data);
 	fclose(infile);
 	fclose(outfile);
+
+	return 0;
 }
