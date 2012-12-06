@@ -22,7 +22,7 @@ Resolu&ccedil;&atilde;o das quest&otilde;es para a primeira prova de Multim&iacu
 - e10
 - e11
 - e12
-- e13
+- e13 OK
 - e14
 - e15
 - e16

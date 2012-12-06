@@ -19,3 +19,7 @@
 # Temporary files
 *~
 *.swp
+
+# Input files for tests
+*.wav
+

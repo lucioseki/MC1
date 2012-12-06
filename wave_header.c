@@ -14,4 +14,13 @@ void print_header(HeaderType* h){
 	printf("BlockAlign: %hu\n", h->BlockAlign);
 	printf("BitsPerSample: %hu\n", h->BitsPerSample);
 	printf("Subchunk2ID: %.4s\n", &(h->Subchunk2ID));
+	printf("Subchunk2Size: %d\n", h->Subchunk2Size);
+}
+
+int NumSamples(HeaderType* h){
+	return h->Subchunk2Size * 8 / h->BitsPerSample;
+}
+
+int Time(HeaderType* h){
+	return NumSamples(h) / ( h-> SampleRate * h->NumChannels);
 }
