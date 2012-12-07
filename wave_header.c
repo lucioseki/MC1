@@ -50,3 +50,13 @@ void decimar(HeaderType* inHeader, HeaderType* outHeader, uint16_t* indata, uint
 	}
 }
 
+void ruido(HeaderType* h, uint16_t* indata, uint16_t** outdata){
+	int i;
+	int bytesPerSample = h->BitsPerSample/8;
+	int nSamples = numSamples(h);
+	*outdata = malloc(bytesPerSample * nSamples);
+
+	for(i = 0; i < nSamples; i++){
+		(*outdata)[i] = indata[i] + rand() % 65535;
+	}
+}
