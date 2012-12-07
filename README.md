@@ -23,7 +23,7 @@ Resolu&ccedil;&atilde;o das quest&otilde;es para a primeira prova de Multim&iacu
 - e11
 - e12
 - e13 OK
-- e14
+- e14 Quase. Fator 64 nao funciona
 - e15
 - e16
 - e17a
