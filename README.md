@@ -13,7 +13,7 @@ Resolu&ccedil;&atilde;o das quest&otilde;es para a primeira prova de Multim&iacu
 * e2c OK
 * e2d OK
 - e3 
-- e4
+- e4 Parcialmente feito.
 - e5
 * e6 OK
 - e7
