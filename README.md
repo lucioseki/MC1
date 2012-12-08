@@ -16,27 +16,27 @@ Resolu&ccedil;&atilde;o das quest&otilde;es para a primeira prova de Multim&iacu
 - e4 Parcialmente feito.
 - e5
 * e6 OK
-- e7
-- e8
-- e9
-- e10
-- e11
-- e12
+- e7 Teórica.
+- e8 Teórica.
+- e9 Teórica.
+- e10 Teórica.
+- e11 Teórica.
+- e12 
 - e13 OK
-- e14 Quase. Fator 64 nao funciona
-- e15
+- e14 Quase. Fator 64 nao funciona.
+- e15 Teórica.
 - e16
 - e17a
 - e17b
 - e17c
-- e18
-- e19
-- e20
-- e21
-- e22
-- e23
-- e24
-- e25
+- e18 Teórica.
+- e19 Teórica.
+- e20 Teórica.
+- e21 Teórica.
+- e22 Teórica.
+- e23 Teórica.
+- e24 Teórica.
+- e25 Teórica.
 - e26
 - e27
 - e28
@@ -46,4 +46,3 @@ Resolu&ccedil;&atilde;o das quest&otilde;es para a primeira prova de Multim&iacu
 - e30c
 - e31
 - e32
-
