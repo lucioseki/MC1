@@ -12,6 +12,7 @@ Resolu&ccedil;&atilde;o das quest&otilde;es para a primeira prova de Multim&iacu
 * e2b OK
 * e2c OK
 * e2d OK
+* e2v2.m Ok - Versão da machadojeh para o exercício.
 - e3 
 - e4 Parcialmente feito.
 - e5
@@ -46,3 +47,15 @@ Resolu&ccedil;&atilde;o das quest&otilde;es para a primeira prova de Multim&iacu
 - e30c
 - e31
 - e32
+- e33
+
+Lista versão estendida
+
+- e34
+- e35
+- e36
+- e37a
+- e37b
+- e37c
+- e37d
+
